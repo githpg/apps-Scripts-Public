@@ -1,0 +1,13 @@
+/** Extracts data from a specified 
+ * path from json data in target cell
+ */
+
+function getDataFromCell(json, path) {
+  const obj = JSON.parse(json);
+  const keys = path.split('.');
+  let current = obj;
+  for( key of keys ){
+    current = current[key];
+  }
+  return current;
+}
