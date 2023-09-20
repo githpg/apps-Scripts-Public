@@ -1,0 +1,12 @@
+
+function convertUnixToDateTime(unixTimestamp) {
+  // Check if unixTimestamp is a valid number
+  if (!isNaN(unixTimestamp) && unixTimestamp !== null && unixTimestamp !== "") {
+    var dateMilliseconds = parseInt(unixTimestamp);
+    var date = new Date(dateMilliseconds);
+    return Utilities.formatDate(date, "GMT", "dd/MM/yyyy");
+  } else {
+    // Return an empty string or any specific value you prefer
+    return "";
+  }
+}
