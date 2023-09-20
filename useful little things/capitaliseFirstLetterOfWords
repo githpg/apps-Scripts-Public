@@ -1,0 +1,6 @@
+// Define the function to capitalize the first letter of each word in a string
+function capitaliseFirstLetterOfWords(str) {
+  return str.replace(/\b\w+/g, function (word) {
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+  });
+}
